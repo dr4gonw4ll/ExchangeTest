@@ -10,12 +10,12 @@ https://github.com/sensepost/ruler
 https://github.com/dafthack/MailSniper
 https://github.com/vfedenko/PowerShellScripts
 
-#PS Signing
+# PS Signing
 
 $cert = Get-ChildItem -Path Cert:\CurrentUser\My -CodeSigningCert
 Set-AuthenticodeSignature -FilePath '.\myscript.ps1' -Certificate $cert
 
-#PS Connection to Exchange Server
+# PS Connection to Exchange Server
 
 $UserCredential = Get-Credential
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://<NAME> -Authentication <<>> -Credential $UserCredential
